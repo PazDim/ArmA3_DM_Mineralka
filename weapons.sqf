@@ -1,5 +1,5 @@
 /* Индекс снаряжения. Обновляется сервером, используется клиентами. */
-weaponSelector = 0;
+weaponSelector = -1;
 
 /* Сервер/клиент */
 if (isDedicated) then
@@ -8,7 +8,8 @@ if (isDedicated) then
     _weaponTimestamp = diag_tickTime;
     if ((diag_tickTime - _weaponTimestamp) > 10) then
     {
-        weaponSelector = 0;
+        /* TODO: Как-то объявить количество наборов экипировки */
+        weaponSelector = floor (random 6);
         _weaponTimestamp = diag_tickTime;
     };
     publicVariable "weaponSelector";
@@ -19,13 +20,17 @@ else
     /* Флаг установки прицела. Изначально активен, изменяется при сохранении
      * инвентаря, используется при выдаче снаряжения. */
     opticFlag = true;
+    equipFunction = compile preprocessFile "equip.sqf";
 
     /* Ждем создания игрока */
     waitUntil {!isNull player};
+    /* Ждем, пока сервер установит индекс снаряжения */
+    waitUntil {-1 != weaponSelector};
     /* Обработчик возрождения (настраивает экипировку, телепортирует игрока */
     player addEventHandler ["Respawn",
     {
-        /* TODO: Выдача снаряжения, с учетом настроек игрока */
+        /* Выдача снаряжения, с учетом настроек игрока */
+        [weaponSelector, opticFlag] call equipFunction;
     }];
     /* Обработчик инвенторя (сохраняет параметры экипировки) */
     player addEventHandler ["InventoryClosed",
@@ -50,4 +55,5 @@ else
             }
         };
     }];
+    [weaponSelector, opticFlag] call equipFunction;
 }
