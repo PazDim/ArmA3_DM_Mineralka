@@ -10,12 +10,17 @@ if (isDedicated) then
     weaponSelector = floor (random 6);
     while {true} do
     {
-        if ((diag_tickTime - _weaponTimestamp) > 10) then
+        /* TODO: Обновление индекса снаряжения каждые 3 минуты. Сделать через настройки */
+        if ((diag_tickTime - _weaponTimestamp) > 180) then
         {
             /* TODO: Как-то объявить количество наборов экипировки */
             weaponSelector = floor (random 6);
             _weaponTimestamp = diag_tickTime;
         };
+        
+        /* Удаление трупов. Вынести в отдельный файл. */
+		{deleteVehicle _x} forEach allDead;
+
         publicVariable "weaponSelector";
         sleep 1;
     }
