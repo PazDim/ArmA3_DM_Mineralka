@@ -6,14 +6,19 @@ if (isDedicated) then
 {
     /* Таймстамп для обновления снаряжения */
     _weaponTimestamp = diag_tickTime;
-    if ((diag_tickTime - _weaponTimestamp) > 10) then
+    /* Начальное задание индекса снаряжения */
+    weaponSelector = floor (random 6);
+    while {true} do
     {
-        /* TODO: Как-то объявить количество наборов экипировки */
-        weaponSelector = floor (random 6);
-        _weaponTimestamp = diag_tickTime;
-    };
-    publicVariable "weaponSelector";
-    sleep 1;
+        if ((diag_tickTime - _weaponTimestamp) > 10) then
+        {
+            /* TODO: Как-то объявить количество наборов экипировки */
+            weaponSelector = floor (random 6);
+            _weaponTimestamp = diag_tickTime;
+        };
+        publicVariable "weaponSelector";
+        sleep 1;
+    }
 }
 else
 {

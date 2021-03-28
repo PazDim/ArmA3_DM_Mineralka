@@ -1,0 +1,14 @@
+onLoadMission = "DM_Mineralka";
+onLoadMissionTime = 0;
+
+saving = 0;
+enableDebugConsole = 0;
+disabledAI = 1;
+respawn = BASE;
+respawnDelay = 5;
+
+class Header {
+	gameType  = DM;
+	minPlayers = 2;
+	maxPlayers = 16;
+};
