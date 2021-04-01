@@ -1,1 +1,3 @@
-[] execVM "weapons.sqf";
+;Клиентский скрипт запускать первым, так как обнуляет индекс снаряжения
+[] execVM "client.sqf";
+[] execVM "server.sqf";
