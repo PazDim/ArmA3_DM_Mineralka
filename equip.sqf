@@ -94,17 +94,18 @@ switch (index) do
         player forceAddUniform "rhs_uniform_gorka_r_g";
         player addVest "rhs_6sh92_digi_headset";
         
-        player addWeapon "rhs_weap_ak103_2_npz";
-        player addPrimaryWeaponItem "rhs_acc_dtk1";
-        player addPrimaryWeaponItem "rhs_acc_perst1ik";
+        player addWeapon "rhs_weap_ak103_zenitco01";
+        player addPrimaryWeaponItem "rhs_acc_dtk3";
+        player addPrimaryWeaponItem "rhs_acc_perst3";
         if (scopeFlag) then
         {
-            player addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+            player addPrimaryWeaponItem "rhsusf_acc_mrds_fwd";
         }
         else
         {
-            player addItemToUniform "rhsusf_acc_eotech_552";
+            player addItemToUniform "rhsusf_acc_mrds_fwd";
         };
+        this addPrimaryWeaponItem "rhsusf_acc_grip3";
         player addPrimaryWeaponItem "rhs_30Rnd_762x39mm_polymer";
 
         for "_i" from 1 to 2 do {player addItemToUniform "rhs_30Rnd_762x39mm_polymer";};
@@ -147,7 +148,7 @@ switch (index) do
 
         for "_i" from 1 to 3 do {player addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
         for "_i" from 1 to 2 do {player addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
-        player addHeadgear "H_HeadSet_black_F";
+        player addHeadgear "rhsusf_bowman_cap";
     };
     default
     {
