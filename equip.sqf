@@ -20,6 +20,7 @@ removeGoggles player;
 /* Наборы экипировки */
 switch (index) do
 {
+    /* ЕМР лес, АК-74 */
     case 0:
     {
         player forceAddUniform "rhs_uniform_emr_patchless";
@@ -44,6 +45,7 @@ switch (index) do
     };
     case 1:
     {
+        /* MARPAT, M4 */
         player forceAddUniform "rhs_uniform_FROG01_wd";
         player addVest "rhsusf_spc";
 
@@ -68,6 +70,7 @@ switch (index) do
     };
     case 2:
     {
+        /* ACUPAT, Mk17 */
         player forceAddUniform "rhs_uniform_abu";
         player addVest "rhsusf_iotv_ucp_Grenadier";
         
@@ -91,6 +94,7 @@ switch (index) do
     };
     case 3:
     {
+        /* РФ ЧВК, АК-103 */
         player forceAddUniform "rhs_uniform_gorka_r_g";
         player addVest "rhs_6sh92_digi_headset";
         
@@ -115,6 +119,7 @@ switch (index) do
     };
     case 4:
     {
+        /* Бомж, АКМ */
         player addWeapon "rhs_weap_akm";
         player addPrimaryWeaponItem "rhs_acc_dtkakm";
         player addPrimaryWeaponItem "rhs_30Rnd_762x39mm_bakelite";
@@ -129,6 +134,7 @@ switch (index) do
     };
     case 5:
     {
+        /* US ЧВК, М4 */
         player forceAddUniform "U_BG_Guerilla2_1";
         player addVest "V_TacVest_brn";
         
@@ -149,6 +155,71 @@ switch (index) do
         for "_i" from 1 to 3 do {player addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
         for "_i" from 1 to 2 do {player addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
         player addHeadgear "rhsusf_bowman_cap";
+    };
+    case 6:
+    {
+        /* Woodland, M16 */
+        player forceAddUniform "rhs_uniform_bdu_erdl";
+        
+        player addWeapon "rhs_weap_m16a4_carryhandle";
+        player addPrimaryWeaponItem "rhsusf_acc_SFMB556";
+        player addPrimaryWeaponItem "acc_flashlight";
+        if (scopeFlag) then
+        {
+            player addPrimaryWeaponItem "rhsusf_acc_compm4";
+        }
+        else
+        {
+            player addItemToUniform "rhsusf_acc_compm4";
+        };
+        player addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        
+        for "_i" from 1 to 4 do {player addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+        player addHeadgear "rhs_Booniehat_m81";
+    };
+    case 7:
+    {
+        /* СПН РФ, АК-74, дозвук */
+        player forceAddUniform "rhs_uniform_gorka_1_b";
+        
+        player addWeapon "rhs_weap_ak74m";
+        player addPrimaryWeaponItem "rhs_acc_tgpa";
+        player addPrimaryWeaponItem "rhs_acc_2dpZenit";
+        if (scopeFlag) then
+        {
+            player addPrimaryWeaponItem "rhs_acc_1p63";
+        }
+        else
+        {
+            player addItemToUniform "rhs_acc_1p63";
+        };
+        player addPrimaryWeaponItem "rhs_30Rnd_545x39_7U1_AK";
+        
+        for "_i" from 1 to 4 do {player addItemToUniform "rhs_30Rnd_545x39_7U1_AK";};
+        player addHeadgear "rhs_altyn_novisor_bala";
+    };
+    case 8:
+    {
+        /* СПН US, HK416 */
+        player forceAddUniform "rhs_uniform_g3_blk";
+        
+        player addWeapon "rhs_weap_hk416d10";
+        player addPrimaryWeaponItem "rhsusf_acc_nt4_black";
+        player addPrimaryWeaponItem "rhsusf_acc_M952V";
+        if (scopeFlag) then
+        {
+            player addPrimaryWeaponItem "rhsusf_acc_eotech_552";
+        }
+        else
+        {
+            player addItemToUniform "rhsusf_acc_eotech_552";
+        };
+        player addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+        player addPrimaryWeaponItem "rhsusf_acc_grip2";
+        
+        for "_i" from 1 to 4 do {player addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+        player addHeadgear "rhsusf_opscore_bk";
+        player addGoggles "rhs_googles_clear";
     };
     default
     {

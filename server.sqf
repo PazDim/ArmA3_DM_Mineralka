@@ -1,5 +1,8 @@
 if (isServer) then
 {
+    /* Настраиваем враждебность всех персонажей друг другу */
+    resistance setFriend [resistance, 0];
+
     /* Таймстамп для обновления снаряжения */
     _weaponTimestamp = diag_tickTime;
     /* Начальное задание индекса снаряжения */
@@ -11,7 +14,7 @@ if (isServer) then
         if ((diag_tickTime - _weaponTimestamp) > 180) then
         {
             /* TODO: Как-то объявить количество наборов экипировки */
-            weaponSelector = floor (random 6);
+            weaponSelector = floor (random 9);
             _weaponTimestamp = diag_tickTime;
         };
         
