@@ -109,7 +109,7 @@ switch (index) do
         {
             player addItemToUniform "rhsusf_acc_mrds_fwd";
         };
-        this addPrimaryWeaponItem "rhsusf_acc_grip3";
+        player addPrimaryWeaponItem "rhsusf_acc_grip3";
         player addPrimaryWeaponItem "rhs_30Rnd_762x39mm_polymer";
 
         for "_i" from 1 to 2 do {player addItemToUniform "rhs_30Rnd_762x39mm_polymer";};
