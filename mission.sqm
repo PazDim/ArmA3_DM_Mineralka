@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=327;
+		nextID=329;
 	};
 	class MarkerIDProvider
 	{
-		nextID=2;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={4422.4155,182.45186,3434.2515};
-		dir[]={-0.82658106,-0.43059713,-0.36242798};
-		up[]={-0.39435628,0.90254408,-0.17291184};
-		aside[]={-0.40156293,9.364885e-008,0.91583341};
+		pos[]={4387.5322,92.670502,3141.8123};
+		dir[]={-0.8096965,-0.54489034,0.21791323};
+		up[]={-0.52616811,0.83850729,0.14160737};
+		aside[]={0.25988233,-7.4505806e-009,0.96564031};
 	};
 };
 binarizationWanted=0;
@@ -211,12 +211,12 @@ class Mission
 	};
 	class Entities
 	{
-		items=291;
+		items=292;
 		class Item0
 		{
 			dataType="Marker";
 			position[]={4344.2979,27,3173.574};
-			name="respawn_guerrila";
+			name="respawn_area";
 			markerType="RECTANGLE";
 			type="rectangle";
 			a=130;
@@ -5337,6 +5337,15 @@ class Mission
 			id=326;
 			type="CUP_str_dub";
 			atlOffset=-4.7683716e-007;
+		};
+		class Item291
+		{
+			dataType="Marker";
+			position[]={4501.7012,42.043999,3365.386};
+			name="respawn_guerrila";
+			type="mil_start";
+			id=327;
+			atlOffset=-9.9182129e-005;
 		};
 	};
 };

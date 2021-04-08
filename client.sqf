@@ -15,6 +15,8 @@ player addEventHandler ["Respawn",
 {
     /* Выдача снаряжения, с учетом настроек игрока */
     [weaponSelector, opticFlag] call equipFunction;
+    /* Перемещаем игрока в случайную позицию */
+    player setPos ([] call compile preprocessFileLineNumbers "getNewPos.sqf");
 }];
 /* Обработчик инвенторя (сохраняет параметры экипировки) */
 player addEventHandler ["InventoryClosed",
@@ -39,4 +41,7 @@ player addEventHandler ["InventoryClosed",
         }
     };
 }];
+
+/* Начальная настройка игрока */
 [weaponSelector, opticFlag] call equipFunction;
+player setPos ([] call compile preprocessFileLineNumbers "getNewPos.sqf");
