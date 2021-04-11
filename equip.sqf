@@ -28,7 +28,7 @@ switch (index) do
         
         player addWeapon "rhs_weap_ak74m";
         player addPrimaryWeaponItem "rhs_acc_dtk";
-        player addPrimaryWeaponItem "rhs_acc_perst1ik";
+        player addPrimaryWeaponItem "rhs_acc_2dpZenit";
         if (scopeFlag) then
         {
             player addPrimaryWeaponItem "rhs_acc_ekp1";
@@ -51,7 +51,7 @@ switch (index) do
 
         player addWeapon "rhs_weap_m4a1_blockII";
         player addPrimaryWeaponItem "rhsusf_acc_SF3P556";
-        player addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
+        player addPrimaryWeaponItem "rhsusf_acc_wmx_bk";
         if (scopeFlag) then
         {
             player addPrimaryWeaponItem "rhsusf_acc_compm4";
@@ -75,7 +75,7 @@ switch (index) do
         player addVest "rhsusf_iotv_ucp_Grenadier";
         
         player addWeapon "rhs_weap_SCARH_FDE_LB";
-        player addPrimaryWeaponItem "rhsusf_acc_anpeq15side";
+        player addPrimaryWeaponItem "rhsusf_acc_anpeq16a_light";
         if (scopeFlag) then
         {
             player addPrimaryWeaponItem "rhsusf_acc_RX01";
@@ -100,7 +100,7 @@ switch (index) do
         
         player addWeapon "rhs_weap_ak103_zenitco01";
         player addPrimaryWeaponItem "rhs_acc_dtk3";
-        player addPrimaryWeaponItem "rhs_acc_perst3";
+        player addPrimaryWeaponItem "rhs_acc_2dpZenit_ris";
         if (scopeFlag) then
         {
             player addPrimaryWeaponItem "rhsusf_acc_mrds_fwd";
@@ -122,6 +122,7 @@ switch (index) do
         /* Бомж, АКМ */
         player addWeapon "rhs_weap_akm";
         player addPrimaryWeaponItem "rhs_acc_dtkakm";
+        player addPrimaryWeaponItem "rhs_acc_2dpZenit";
         player addPrimaryWeaponItem "rhs_30Rnd_762x39mm_bakelite";
 
         player forceAddUniform "U_BG_Guerilla3_1";
@@ -140,7 +141,7 @@ switch (index) do
         
         player addWeapon "rhs_weap_m4a1_blockII_wd";
         player addPrimaryWeaponItem "rhsusf_acc_SF3P556";
-        player addPrimaryWeaponItem "rhsusf_acc_anpeq15A";
+        player addPrimaryWeaponItem "rhsusf_acc_anpeq16a_light";
         if (scopeFlag) then
         {
             player addPrimaryWeaponItem "rhsusf_acc_M2A1";
@@ -205,7 +206,7 @@ switch (index) do
         
         player addWeapon "rhs_weap_hk416d10";
         player addPrimaryWeaponItem "rhsusf_acc_nt4_black";
-        player addPrimaryWeaponItem "rhsusf_acc_M952V";
+        player addPrimaryWeaponItem "rhsusf_acc_wmx_bk";
         if (scopeFlag) then
         {
             player addPrimaryWeaponItem "rhsusf_acc_eotech_552";

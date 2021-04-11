@@ -1,5 +1,8 @@
 if (isServer) then
 {
+    /* Ускорение времени */
+    setTimeMultiplier 60;
+    
     /* Настраиваем враждебность всех персонажей друг другу */
     resistance setFriend [resistance, 0];
 
